@@ -80,7 +80,7 @@ class PostController extends Controller
             'img' => 'required|string'
         ]);
 
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
 
         // Update post
         $post->update([
